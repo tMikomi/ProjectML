@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasifikasi DBD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Form Klasifikasi DBD</h1>
+    </header>
+
+    <div class="container">
+        <form id="dbdForm">
+            <label for="jenisKelamin">Jenis Kelamin:</label>
+            <select id="jenisKelamin" required>
+                <option value="">Pilih Jenis Kelamin</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label for="usia">Usia (tahun):</label>
+            <select id="usia" required>
+                <option value="">Pilih Usia</option>
+                <option value="0-28">Bayi baru lahir (0-28 hari)</option>
+                <option value="1">Bayi usia 1 minggu</option>
+                <option value="2">Bayi usia 1 bulan</option>
+                <option value="3">Bayi usia 3 bulan</option>
+                <option value="12">Anak usia 1 tahun</option>
+                <option value="10">Anak usia 10 tahun</option>
+                <option value="11-14">Remaja usia 11-14 tahun</option>
+                <option value="15-17">Remaja usia 15-17 tahun</option>
+                <option value="18+">Dewasa</option>
+            </select>
+
+
+
+            <label for="gejala">Gejala:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Sakit Kepala Berat" class="gejala"> Sakit Kepala Berat</label>
+                <label><input type="checkbox" value="Demam Tinggi" class="gejala"> Demam Tinggi</label>
+                <label><input type="checkbox" value="Mual dan Muntah" class="gejala"> Mual dan Muntah</label>
+                <label><input type="checkbox" value="Ruam Kulit" class="gejala"> Ruam Kulit</label>
+                <label><input type="checkbox" value="Kelelahan Ekstrem" class="gejala"> Kelelahan Ekstrem</label>
+                <label><input type="checkbox" value="Nyeri Otot dan Sendi" class="gejala"> Nyeri Otot dan Sendi</label>
+                <label><input type="checkbox" value="Pendarahan Ringan" class="gejala"> Pendarahan Ringan</label>
+                <label><input type="checkbox" value="Tidak Ada Gejala" class="gejala"> Tidak Ada Gejala</label>
+            </div>
+
+            <label for="trombosit">Trombosit (dalam mikroliter):</label>
+            <input type="number" id="trombosit" required placeholder="Masukkan jumlah trombosit" />
+
+            <label for="hematokrit">Hematokrit (%):</label>
+            <input type="number" id="hematokrit" required placeholder="Masukkan jumlah hematokrit" />
+
+            <label for="ujiNS1">Hasil Uji NS1 (Positif/Negatif):</label>
+            <select id="ujiNS1" required>
+                <option value="">Pilih Hasil Uji NS1</option>
+                <option value="Positif">Positif</option>
+                <option value="Negatif">Negatif</option>
+            </select>
+
+            <button type="button" onclick="klasifikasiDBD()">Klasifikasi</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
