@@ -81,3 +81,109 @@ button:hover {
     font-size: 16px;
     font-weight: bold;
 }
+
+/* Styling untuk footer */
+footer {
+    background-color: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Menyembunyikan konten yang melampaui area footer */
+}
+
+.news-container {
+    display: flex;
+    animation: scroll-left 20s linear infinite; /* Animasi bergerak ke kiri */
+    gap: 30px; /* Memberikan jarak antar artikel */
+}
+
+.news-item {
+    text-align: center;
+    width: 250px; /* Menentukan ukuran lebar item */
+    margin-right: 20px; /* Memberikan jarak antar item */
+}
+
+.news-item img {
+    width: 0%; /* Gambar mengikuti lebar item */
+    height: 50 px; /* Menambah tinggi gambar agar lebih panjang */
+    object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.news-item a {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    color: #4CAF50;
+}
+
+/* Animasi untuk bergerak ke kiri */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Mulai dari sisi kanan */
+    }
+    100% {
+        transform: translateX(-100%); /* Berhenti di sisi kiri */
+    }
+}
+/* Reset margin dan padding untuk body dan elemen lainnya */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Styling untuk header */
+header {
+    display: flex;
+    justify-content: space-between; /* Memastikan elemen header kiri dan kanan terpisah */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengatur lebar header agar sesuai konten */
+.header-left, .header-center, .header-right {
+    flex: 1; /* Membuat setiap bagian mengisi ruang secara proporsional */
+    display: flex;
+    justify-content: flex-start; /* Menjaga posisi header-left di kiri */
+    align-items: center;
+}
+
+.header-center {
+    justify-content: center; /* Menempatkan teks di tengah */
+}
+
+.header-right {
+    justify-content: flex-end; /* Menempatkan teks di kanan */
+}
+
+/* Styling untuk h1 */
+h1 {
+    color: #333;
+}
+
+/* Container utama form */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

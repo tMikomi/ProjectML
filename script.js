@@ -99,3 +99,4 @@ function klasifikasiDBD() {
 // Menambahkan event listener untuk memperbarui hematokrit ketika usia atau jenis kelamin berubah
 document.getElementById('jenisKelamin').addEventListener('change', updateHematokrit);
 document.getElementById('usia').addEventListener('input', updateHematokrit);
+
